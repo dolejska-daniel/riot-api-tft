@@ -1,0 +1,37 @@
+{
+  "name": "themy3/riot-api-tft",
+  "type": "library",
+  "description": "Riot Teamfight Tactics API wrapper for PHP8",
+  "keywords": ["riot", "teamfight tactics", "tft", "api", "wrapper", "php8"],
+  "homepage": "https://github.com/dolejska-daniel/riot-api-tft",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Yaroslav Molchan",
+      "email": "yaroslav.molchan@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Daniel Dolejška",
+      "email": "dolejskad@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "scripts": {
+    "test": "XDEBUG_MODE=coverage phpunit --configuration phpunit.xml --coverage-text --coverage-html build/coverage"
+  },
+  "require": {
+    "dolejska-daniel/riot-api-base": "^v2",
+    "php": ">=8.1",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10"
+  },
+  "autoload": {
+    "psr-4": {
+      "RiotAPI\\TFTAPI\\": "src/TftAPI"
+    }
+  },
+  "minimum-stability": "stable"
+}
