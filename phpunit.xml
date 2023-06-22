@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.2/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         beStrictAboutOutputDuringTests="true"
+         cacheDirectory=".phpunit.cache"
+>
+    <testsuites>
+        <testsuite name="TftAPI:Definition_Tests">
+            <directory>tests/TftAPI/Definition/</directory>
+        </testsuite>
+        <testsuite name="TftAPI:Endpoint_Tests">
+            <directory>tests/TftAPI/Endpoint/</directory>
+        </testsuite>
+        <testsuite name="TftAPI:EndpointIntegrity_Tests">
+            <directory>tests/TftAPI/EndpointObjectIntegrity/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="IS_UNIT_TESTING" value="1"/>
+    </php>
+    <coverage ignoreDeprecatedCodeUnits="true"
+              disableCodeCoverageIgnore="true"/>
+    <source>
+        <include>
+            <directory>src/TftAPI</directory>
+        </include>
+        <exclude>
+            <directory>vendor</directory>
+        </exclude>
+    </source>
+</phpunit>
