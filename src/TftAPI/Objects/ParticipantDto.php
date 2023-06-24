@@ -155,4 +155,12 @@ class ParticipantDto extends ApiObject
 	 * @var UnitDto[] $units
 	 */
 	public array $units;
+
+    /**
+     * Available when received from:
+     *   - @see TFTAPI::getMatch
+     *
+     * @var int|null $partner_group_id
+     */
+    public ?int $partner_group_id = null;
 }
